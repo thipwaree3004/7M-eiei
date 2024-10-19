@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าถัดไป</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>HAPPY 7 M</h1>
+
+        <div class="image-space">
+            <img src="pic4.jpg" alt="Image Description" style="max-width: 100%; height: auto;">
+        </div>
+
+        <p>THANK YOU FOR EVERYTHING</p>
+        <p>ขอบคุณที่อยู่ข้างๆเค้ามาตลอดจนถึงวันนี้นะ ปาปี๊น่ารักที่สุดเยย</p>
+
+        
+        <!-- วิดีโอ -->
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/eKDs6Z7-xsQ" frameborder="0" allowfullscreen></iframe>
+
+        </div>
+
+        <div class="image-gallery">
+            <div class="image-column">
+                <img src="pic1.jpg" alt="Image 1" onclick="goToPage('page3.html')">
+                <div class="description">ทายสินี่อะไร</div>
+            </div>
+            <div class="image-column">
+                <img src="pic2.jpeg" alt="Image 2" onclick="goToPage('page4.html')">
+                <div class="description">อันนี้ด้วย</div>
+            </div>
+            <div class="image-column">
+                <img src="pic3.jpg" alt="Image 3" onclick="goToPage('page5.html')">
+                <div class="description">อันนี้ล่ะ</div>
+            </div>
+        </div>
+
+        <button onclick="window.history.back()">กลับไปหน้าแรก</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

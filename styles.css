@@ -1,0 +1,129 @@
+body {
+    background-color: #f0f8ff; /* สีพื้นหลังฟ้าอ่อน */
+    font-family: 'Arial', sans-serif; /* แบบตัวอักษร */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px; /* กำหนดความกว้างสูงสุดของ container */
+    margin: auto; /* จัดกลาง */
+    text-align: center;
+    padding: 20px; /* เพิ่ม padding รอบๆ */
+}
+
+h1 {
+    color: #ff69b4; /* สีชมพู */
+    font-size: 3em;
+    margin: 20px 0; /* ระยะห่างด้านบนและล่าง */
+}
+
+/* เพิ่มสไตล์สำหรับพื้นที่รูปภาพ */
+.image-space {
+    margin: 20px 0; /* ระยะห่างด้านบนและล่าง */
+}
+
+.image-space img {
+    max-width: 60%; /* ปรับขนาดสูงสุดให้ไม่เกิน 60% ของความกว้าง */
+    height: auto; /* ความสูงปรับตามสัดส่วน */
+    border-radius: 10px; /* ทำมุมให้โค้ง */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* เงาให้กับรูป */
+}
+
+p {
+    color: #555;
+    font-size: 1.4em;
+    line-height: 1.6; /* เพิ่มระยะห่างระหว่างบรรทัด */
+    margin: 15px 0; /* ระยะห่างด้านบนและล่าง */
+    padding: 15px; /* เพิ่ม padding รอบตัวอักษร */
+    border-radius: 10px; /* ทำมุมให้โค้ง */
+    background-color: rgba(255, 105, 180, 0.1); /* พื้นหลังอ่อน ๆ */
+    transition: transform 0.3s; /* เพิ่มเอฟเฟกต์เมื่อเลื่อนเมาส์ */
+}
+
+p:hover {
+    transform: scale(1.02); /* ขยายข้อความเมื่อเลื่อนเมาส์ */
+}
+
+button {
+    background-color: #ff69b4; /* ปุ่มสีชมพู */
+    color: white; /* ตัวอักษรสีขาว */
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* เพิ่มเอฟเฟกต์เมื่อเลื่อนเมาส์ */
+    margin-top: 20px; /* ระยะห่างด้านบน */
+}
+
+button:hover {
+    background-color: #ff1493; /* สีชมพูเข้มเมื่อเลื่อนเมาส์ */
+    transform: scale(1.05); /* ขยายปุ่มเมื่อเลื่อนเมาส์ */
+}
+
+.video-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 600px; /* กำหนดขนาดสูงสุด */
+    height: 350px; /* กำหนดความสูง */
+    border-radius: 10px; /* ทำมุมให้โค้ง */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* เงาให้กับวิดีโอ */
+}
+
+.image-gallery {
+    display: flex; /* ใช้ Flexbox สำหรับจัดเรียงคอลัมน์ */
+    justify-content: center; /* จัดกลาง */
+    flex-wrap: wrap; /* ทำให้หลายบรรทัด */
+    margin: 20px 0;
+}
+
+.image-column {
+    width: 22%; /* กำหนดความกว้างของแต่ละคอลัมน์ */
+    text-align: center;
+    margin: 10px; /* ระยะห่างระหว่างคอลัมน์ */
+    border-radius: 10px; /* ทำมุมให้โค้ง */
+    background-color: rgba(255, 105, 180, 0.1); /* พื้นหลังอ่อน ๆ */
+    transition: transform 0.3s; /* เพิ่มเอฟเฟกต์ */
+}
+
+.image-column:hover {
+    transform: scale(1.05); /* ขยายรูปเมื่อเลื่อนเมาส์ */
+}
+
+.image-column img {
+    width: 100%; /* ปรับขนาดรูปให้เต็มคอลัมน์ */
+    border-radius: 10px; /* ทำมุมให้โค้ง */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* เงาให้กับรูป */
+}
+
+.description {
+    margin-top: 10px; /* ระยะห่างด้านบน */
+    color: #555; /* สีของข้อความอธิบาย */
+    font-size: 0.9em; /* ขนาดข้อความ */
+}
+
+/* การปรับแต่งสำหรับหน้าจอมือถือ */
+@media (max-width: 768px) {
+    .image-column {
+        width: 100%; /* ทำให้เต็มความกว้างสำหรับหน้าจอเล็ก */
+        max-width: 90%; /* กำหนดความกว้างสูงสุดสำหรับมือถือ */
+    }
+
+    h1 {
+        font-size: 2.5em; /* ปรับขนาด h1 ลงสำหรับมือถือ */
+    }
+
+    p {
+        font-size: 1.1em; /* ลดขนาดตัวอักษรลง */
+    }
+
+    button {
+        font-size: 1em; /* ลดขนาดปุ่มลง */
+        padding: 10px 20px; /* ลด padding */
+    }
+}
